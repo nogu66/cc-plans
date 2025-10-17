@@ -1,0 +1,39 @@
+{
+  "name": "cc-plans",
+  "version": "0.1.0",
+  "description": "CLI scaffolding for plan-driven workflows.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "cc-plans": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "docs",
+    "assets"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/cli.js",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "cli",
+    "plans",
+    "cc"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3"
+  }
+}
